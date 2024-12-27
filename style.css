@@ -1,0 +1,198 @@
+:root{
+    --color-marron: #8C5C51;
+    --color-rojo: #F23838;
+    --color-amarillo: #F2B749;
+    --color-verde: #11D968;
+    --color-celeste: #5CC8F2;
+    --color-blanco: #E5E1DD;
+    --color-blanco-sombra: #D1CBC4;
+    --color-negro-lente-exterior: #162939;
+    --color-negro-lente-interior: #2D4357;
+    --color-destello-lente: #47627B;
+    --color-borde-lente: #DDD7D2;
+    --body-color: #efc;
+    --logo-size: 20rem;
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid #f00; */
+}
+
+html{
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--body-color);
+}
+
+img{
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+
+.instagram{
+    width: var(--logo-size);
+    height: var(--logo-size);
+    background-color: var(--color-blanco);
+    border-radius: 15%;
+    position: relative;
+    border: none;
+    overflow: hidden;
+}
+
+.instagram::before{
+    content: '';
+    width: 14rem;
+    height: 12rem;
+    position: absolute;
+    top: 8rem;
+    left: 7rem;
+    bottom: 0;
+    margin: auto;
+    transform: skew(45deg);
+    overflow: hidden;
+    background-color: var(--color-blanco-sombra);
+    border-radius: 50% 0 0 0;
+
+}
+
+.top{
+    background-color: var(--color-marron);
+    border-radius: 35px 35px 0 0;
+    overflow: hidden;
+    /* z-index: 15; */
+    position: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.banda-container{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    margin-left: 1.5rem;
+    position: inherit;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+    z-index: 10;
+    /* background-color: red; */
+}
+
+.banda{
+    height: 8rem;
+    width: 1.2rem;
+    /* z-index: 5; */
+    /* position: absolute; */
+    /* overflow: hidden; */
+}
+
+/* colores de las banda */
+.banda:first-child{background-color: var(--color-rojo);}
+.banda:nth-child(2){background-color: var(--color-amarillo);}
+.banda:nth-child(3){background-color: var(--color-verde);}
+.banda:last-child{background-color: var(--color-celeste);}
+
+.flash{
+    width: 4.5rem;
+    height: 3.5rem;
+    border-radius: 100%;
+    background-color: var(--color-negro-lente-exterior);
+    margin-right: 2rem;
+    position: relative;
+}
+
+.flash::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    background-color: var(--color-negro-lente-interior);
+}
+
+.flash::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    margin: auto;
+    border: .35rem solid var(--color-destello-lente);
+    border-radius: 100%;
+}
+
+.lente{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    height: 8rem;
+    width: 8rem;
+    background-color: var(--color-negro-lente-exterior);
+    outline: 1.2rem solid var(--color-borde-lente);
+    z-index: 15;
+}
+
+.lente::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--color-negro-lente-interior);
+}
+
+.lente::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 100%;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--color-negro-lente-exterior);
+}
+
+.destello{
+    position: absolute;
+    background-color: var(--color-destello-lente);
+    width: 1.8rem;
+    height: 1.8rem;
+    top: 2rem;
+    right: 1.5rem;
+    border-radius: 100%;
+}
